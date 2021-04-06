@@ -1,0 +1,52 @@
+A Binary Tree is a rooted tree in which each node is an object that contains a key value. In
+addition to a key and satellite data, each node contains attributes left, right, and p that point to
+the nodes corresponding to its left child, its right child, and its parent, respectively. If a child
+or the parent is missing, the appropriate attribute contains the value NIL. The root node is the
+only node in the tree whose parent is NIL. The Parenthesis Representation of a binary tree
+is recursively defined as given below.
+• The string ( ) represents an empty tree.
+• The string ( k left-subtree right-subtree ) represents a tree whose root node has key k, leftsubtree is the left subtree of the root node in Parenthesis Representation and rightsubtree is the right subtree of the root node in Parenthesis Representation.
+
+
+
+
+Write a program to create a binary tree T and print T in Parenthesis Representation. Your
+program should contain the following functions:
+• Insert(T, k) - inserts the element k to the tree T.
+Note: To insert an element k into a binary tree T, do a level order traversal of the given tree
+T. If we find a node whose left child is empty, make new key k as left child of the node. Else
+if we find a node whose right child is empty, make the new key k as right child. i.e., keep
+traversing the tree until we find a node whose either left or right child is empty.
+• Print(T) - that should take as input a pointer to the root node of a binary tree and print
+the tree in its Parenthesis Representation.
+Input format:
+• Each line contains a character from ‘i’, ‘p’and ‘e’ followed by at most one integer. The integers,
+if given, are in the range [−106
+, 106
+].
+• Character ‘i’ is followed by an integer separated by space. In this operation, a node with this
+integer as key is created and inserted into T.
+• Character ‘p’ is to print the Parenthesis Representation of the tree T.
+• Character ‘e’ is to ‘exit’ from the program.
+Output Format:
+• The output is the space separated Parenthesis Representation of the tree T.
+
+
+
+
+
+Sample Input :
+i 4
+i 3
+i 9
+i 5
+i 6
+i 1
+i 8
+p
+e
+
+
+
+Sample Output :
+( 4 ( 3 ( 5 ( ) ( ) ) ( 6 ( ) ( ) ) ) ( 9 ( 1 ( ) ( ) ) ( 8 ( ) ( ) ) ) )
